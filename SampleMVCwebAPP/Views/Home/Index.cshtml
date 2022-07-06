@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>Home</h2>
+<h3>
+    @ViewData["message"] 
+</h3>
+<div>
+    <ol>
+       <!--AT sign is called razor syntax in mvc it is use to write c# code in html page-->
+    @foreach (var item in ViewBag.Courses)
+    {
+      <li>
+          @item
+      </li>
+        
+
+    }
+    </ol>
+</div>
