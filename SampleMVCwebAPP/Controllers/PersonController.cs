@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Http;
 
 namespace SampleMVCwebAPP.Controllers
 {
+    public class Stud
+    {
+        public int Id { get; set; }
+    }
     public class PersonController : Controller
     {
 
@@ -20,6 +24,20 @@ namespace SampleMVCwebAPP.Controllers
             Options.Add("Yes");
             Options.Add("No");
          ViewData["Options"] = new SelectList(Options);// <--is for single //And multiple selection Use "MultiSelectList"
+            string name = null;
+            ViewData["emp"] = name;
+
+            List<Stud> stud = new List<Stud>()
+            {
+                new Stud{Id=1},
+                new Stud{Id=2},
+                new Stud{Id=3},
+
+            };
+            ViewData["stud"]=stud;
+
+            ViewBag.Student = stud;
+
 
 
             return View();

@@ -7,6 +7,20 @@
 }
 <h2>Personal Details</h2>
 
+@if (ViewData["emp"] != null)
+{
+    <h3> ViewData["emp"] </h3>
+}
+@foreach(var item in (IEnumerable<SampleMVCwebAPP.Controllers.Stud>) ViewData["stud"])
+{
+    
+}
+@foreach(SampleMVCwebAPP.Controllers.Stud item in ViewBag.Student)
+{
+    
+}
+
+
 @using (Html.BeginForm())  @*other option  <form>  </form>*@ 
 {
     <div class="container">
