@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace SampleMVCwebAPP.Models
 {
@@ -32,5 +33,8 @@ namespace SampleMVCwebAPP.Models
         [Required(ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime PublisherDate { get; set; }
     }
 }
