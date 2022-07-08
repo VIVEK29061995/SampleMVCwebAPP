@@ -34,6 +34,7 @@ namespace SampleMVCwebAPP.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
+        [Required(ErrorMessage = "Date is required")]
         [DataType(DataType.Date)]
         public DateTime PublisherDate { get; set; }
     }
